@@ -26,11 +26,9 @@ public class task1 {
             }
         }       
         scanner.close();
-        
 
         for (int j : arr2) {
             System.out.println(j);
         }
-
     }     
 }
