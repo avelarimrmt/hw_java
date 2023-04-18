@@ -4,32 +4,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-// Sample Input:
-
-// 2
-// Рецепт 1. Арахис 100гр, мороженое 200гр. Возьмите арахис и измелчите его. Посыпьте измельчённый арахис на мороженое.
-// Рецепт 2. Клубника 100гр, сгущенка 3кг. Смешать, есть) Радоваться жизни.
-// 3
-// арахис - колбаса
-// клубника - вишня
-// сгущенка - молоко
-// Sample Output:
-
-// Рецепт 1. Колбаса 100гр, мороженое 200гр. Возьмите колбаса и измелчите его. Посыпьте измельчённый колбаса на мороженое.
-// Рецепт 2. Вишня 100гр, молоко 3кг. Смешать, есть) Радоваться жизни.
-
 public class task2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int n = scanner.nextInt();
+        int n = inputInt(scanner, "Введите количество строчек в книге: ");
         String [] recipes = new String[n];
 
+        scanner.nextLine();
+
         for (int i = 0; i < n; i++) {
-            recipes[i] = scanner.nextLine();
+            recipes[i] = inputString(scanner,"Введите строки книги: ");
         }
 
         int m = inputInt(scanner, "Введите количество продуктов, на которые у человека аллергия: ");
+        scanner.nextLine();
 
         HashMap<String, String> products = new HashMap<>();
         products = productsPair(scanner, m, "Введите строки вида продукт1 - продукт2, \nгде продукт1 - продукт, на который у человека аллергия и \nпродукт2 - продукт, на который следует заменить продукт1: ");
@@ -44,12 +33,12 @@ public class task2 {
     }
 
     public static Integer inputInt(Scanner scanner, String txt) {
-        System.out.println(txt);
+        System.out.printf(txt);
         return scanner.nextInt();
     }
 
     public static String inputString(Scanner scanner, String txt) {
-        System.out.println(txt);
+        System.out.printf(txt);
         return scanner.nextLine();
     }
     
