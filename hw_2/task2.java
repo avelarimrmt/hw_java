@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class task2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        
 
         int n = inputInt(scanner, "Введите количество строчек в книге: ");
         String [] recipes = new String[n];
@@ -48,7 +49,7 @@ public class task2 {
         for (int i = 0; i < m; i++)
         {
             String[] pair = scanner.nextLine().split(" - ");
-            replacements.put(pair[0].toLowerCase(), pair[1].toLowerCase());
+            replacements.put(pair[0], pair[1]);
         }
 
         return replacements;
