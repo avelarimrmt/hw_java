@@ -1,7 +1,6 @@
 package hw_3;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class task1 {
@@ -11,7 +10,6 @@ public class task1 {
         System.out.println("Введите размер списка: ");
         int size = scanner.nextInt(); 
 
-        //List<Integer> list = new ArrayList<>(Arrays.asList(2, 43, 22, 8, 5, 11));
         ArrayList<Integer> numbers = new ArrayList<Integer>(size);
         
         System.out.println("Введите элементы списка: ");
@@ -21,9 +19,7 @@ public class task1 {
         }
 
         ArrayList<Integer> resultList = removeEvenNumbers(numbers);
-       
-            System.out.println(resultList);
-        
+        System.out.println(resultList);
         
         scanner.close();
     }
